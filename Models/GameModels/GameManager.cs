@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace Portfolio.Models
+namespace Portfolio.Models.GameModels
 {
     public class GameManager
     {
@@ -69,7 +69,7 @@ namespace Portfolio.Models
                 MainLoopCompleted?.Invoke(this, EventArgs.Empty);
                 await Task.Delay(20);
             }
-            //NextLevel();
+            
         }
 
         public void CountDown(object sender, ElapsedEventArgs e)

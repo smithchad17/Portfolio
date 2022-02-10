@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 
-namespace Portfolio.Pages
+namespace Portfolio.Pages.CallJavascriptPage
 {
     public partial class CallJavascript
     {
@@ -18,7 +18,7 @@ namespace Portfolio.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "./scripts/index.js");
+            _jsModule = await JSRuntime.InvokeAsync<IJSObjectReference>("import", "././scripts/index.js");
         }
         public async Task ShowAlertWindow() => await _jsModule.InvokeVoidAsync("showAlert", new { Name = "John", Age = 35 });
 
